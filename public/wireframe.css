@@ -1,0 +1,65 @@
+/* Wireframe view: open the site with ?wireframe in the address bar (for example http://localhost:3000/?wireframe).
+   Loaded only in that case; it turns the finished design into a grey, low-fidelity wireframe. Delete this file and the switch
+   at the top of app.js to remove it. */
+html.wireframe {
+    --ink: #222;
+    --muted: #666;
+    --line: #8a8a8a;
+    --line2: #bdbdbd;
+    --paper: #fff;
+    --panel: #fff;
+    --brand: #444;
+    --brand-dark: #222;
+    --accent: #666;
+    --accent-dark: #222;
+    --accent-tint: #e6e6e6;
+    --surface: #eee;
+    --soft: #f3f3f3;
+    --radius: 4px;
+    --shadow: none
+}
+html.wireframe, html.wireframe body { font-family: Arial, Helvetica, sans-serif; background: #fff; font-feature-settings: normal }
+html.wireframe * { box-shadow: none !important; text-shadow: none !important; transition: none !important; transform: none !important }
+html.wireframe body { filter: grayscale(1) }
+html.wireframe .heading h1, html.wireframe .brand strong, html.wireframe .stat .value { font-weight: 700; letter-spacing: 0 }
+
+html.wireframe .top, html.wireframe aside { background: #fff; border-color: #8a8a8a }
+html.wireframe .top { border-bottom: 1.5px solid #8a8a8a }
+html.wireframe aside { border-right: 1.5px solid #8a8a8a }
+html.wireframe .logo { background: #fff; color: #222; border: 1.5px solid #444; border-radius: 4px }
+html.wireframe .nav button.active { background: #e2e2e2; color: #111; border: 1.5px solid #666 }
+html.wireframe .nav button:hover { background: #efefef }
+
+html.wireframe .card, html.wireframe .panel, html.wireframe .hero { border: 1.5px solid #8a8a8a; border-radius: 4px; background: #fff }
+html.wireframe .card.stat { border-top: 1.5px solid #8a8a8a }
+
+html.wireframe button { background: #fff; border: 1.5px solid #666; border-radius: 4px; color: #222 }
+html.wireframe button.primary { background: #666; border-color: #444; color: #fff }
+html.wireframe button.primary:hover { background: #444 }
+html.wireframe button.danger { color: #222; border-style: dashed }
+
+html.wireframe .field input, html.wireframe .field select, html.wireframe .field textarea { border: 1.5px solid #8a8a8a; border-radius: 3px; background: #fff }
+html.wireframe .field input:focus, html.wireframe .field select:focus, html.wireframe .field textarea:focus { border-color: #222; outline: none }
+
+html.wireframe .table th { background: #e6e6e6; color: #222 }
+html.wireframe .table td, html.wireframe .table th { border-bottom: 1px solid #bdbdbd }
+html.wireframe .table tbody tr:hover td { background: #f6f6f6 }
+html.wireframe .chip, html.wireframe .chip.good { background: #fff; border: 1px solid #8a8a8a; color: #222 }
+
+/* images become the classic wireframe box with a cross */
+html.wireframe .ph, html.wireframe .ph.large, html.wireframe .ph.mini {
+    background:
+        linear-gradient(to top right, transparent calc(50% - 1px), #9a9a9a, transparent calc(50% + 1px)),
+        linear-gradient(to bottom right, transparent calc(50% - 1px), #9a9a9a, transparent calc(50% + 1px)),
+        #ececec;
+    border: 1.5px solid #8a8a8a; border-radius: 0; color: #444
+}
+html.wireframe .ph img { display: none }
+html.wireframe .ph span { background: #ececec; padding: 2px 8px; position: relative }
+
+html.wireframe .bar { background: #b5b5b5; border: 1.5px solid #666; border-radius: 0 }
+html.wireframe .barcol:hover .bar { background: #8a8a8a }
+html.wireframe .barChart { border-bottom: 1.5px solid #666 }
+html.wireframe .callout { background: #f3f3f3; border-left-color: #666; color: #333 }
+html.wireframe .notice, html.wireframe .empty { background: #f7f7f7; border: 1.5px dashed #8a8a8a }
+html.wireframe .heart, html.wireframe .heart.on { color: #444 }

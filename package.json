@@ -1,0 +1,28 @@
+{
+  "name": "interior-design-platform",
+  "version": "0.1.0",
+  "description": "CSIT314 Interior Design Matching Platform (Node/Express, SQLite, BCE pattern)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node scripts/seed.js",
+    "test": "node --test",
+    "test:sprint1": "node --test \"tests/sprint1/*.test.js\"",
+    "test:sprint2": "node --test \"tests/sprint2/*.test.js\"",
+    "test:sprint3": "node --test \"tests/sprint3/*.test.js\"",
+    "seed:bulk": "node scripts/seed-bulk.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "multer": "^2.0.0"
+  },
+  "optionalDependencies": {
+    "better-sqlite3": "^11.10.0"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}
